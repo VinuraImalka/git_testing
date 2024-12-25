@@ -74,22 +74,24 @@ public class Calculator {
         return num;
     }
 
-    public static void performOperation(Scanner scanner, String operator){
+    public static void performOperation(Scanner scanner, String operator) {
         double num1 = getValidNumber(scanner, "\nEnter First Number: ");
         double num2 = getValidNumber(scanner, "\nEnter Second Number: ");
 
         double result;
-        switch (operator){
+        switch (operator) {
             case "+":
                 result = num1 + num2;
                 System.out.println("Result is: " + result);
                 break;
-            //Rest of the operations
+            //Multiplication Functionality
+
+            case "*":
+                result = num1 * num2;
+                System.out.println("Result is: " + result);
+                break;
         }
-
     }
-
-
 }
 
 
