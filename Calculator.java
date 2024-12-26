@@ -55,8 +55,6 @@ public class Calculator {
 
         performOperation(scanner, operator);
 
-    }
-
     public static double getValidNumber(Scanner scanner, String prompt){
         double num = 0;
         boolean validInput = false;
@@ -101,6 +99,45 @@ public class Calculator {
                 break;
         }
     }
+
+    public static double getValidNumber(Scanner scanner, String prompt){
+        double num = 0;
+        boolean validInput = false;
+
+        while (!validInput){
+            System.out.println(prompt);
+            if (scanner.hasNextDouble()){
+                num = scanner.nextDouble();
+                validInput = true;
+            }else{
+                System.out.println("Ïnvalid Input! Please enter a valid number.");
+                scanner.next();
+            }
+        }
+        return num;
+    }
+
+    public static void performOperation(Scanner scanner, String operator) {
+        double num1 = getValidNumber(scanner, "\nEnter First Number: ");
+        double num2 = getValidNumber(scanner, "\nEnter Second Number: ");
+
+        double result;
+        switch (operator) {
+            //Addition Functionality
+            case "+":
+                result = num1 + num2;
+                System.out.println("Result is: " + result);
+                break;
+
+            //Subtraction Functionality
+
+            //Multiplication Functionality
+            case "*":
+                result = num1 * num2;
+                System.out.println("Result is: " + result);
+                break;
+
+            //Division Functionality
+        }
+    }
 }
-
-
