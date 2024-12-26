@@ -90,6 +90,15 @@ public class Calculator {
                 result = num1 * num2;
                 System.out.println("Result is: " + result);
                 break;
+            //Division Functionality
+            case "/":
+                if (num2 == 0) {
+                    System.out.println("Division by zero is not allowed");
+                } else {
+                    result = num1 / num2;
+                    System.out.println("Result is: " + result);
+                }
+                break;
         }
     }
 }
